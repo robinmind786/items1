@@ -1,43 +1,50 @@
+/* Googlefont Poppins CDN Link */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
+  font-family: 'Poppins', sans-serif;
 }
 body{
-  font-family: 'Poppins', sans-serif;
-  background: rgba(0, 0, 0, 1.0);
 }
 
 
-
-.containers {
-  width: 1000px;
-  margin: 0 auto;
+.alert {
   background: #fff;
+  width: 100%;
 }
 
-.containers .container-content {
-  text-align: center;
+.alert .alert-content {
+  display: flex;
+  margin: 0 6rem;
+  padding: 10px;
 }
+
+.alert .alert-content p {
+  font-size: 14px;
+  margin: 0 px;
+  color: #666;
+}
+
 
 nav{
-  height: 100%;
-  height: 70px;
-  background: #fff;
+  left: 0;
+  width: 100%;
+  height: 82px;
+  background: rgba(0, 0, 0, 1.0);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   z-index: 99;
-  margin: 0 auto;
-  padding: 0 2rem;
 }
 nav .navbar{
   height: 100%;
+  max-width: 1250px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-   background: rgba(0, 0, 0, 1.0); 
+  margin: auto;
+  /* background: red; */
   padding: 0 50px;
 }
 .navbar .logo a{
@@ -47,7 +54,7 @@ nav .navbar{
   font-weight: 600;
 }
 nav .navbar .nav-links{
-  line-height: 70px;
+  line-height: 82px;
   height: 100%;
 }
 nav .navbar .links{
@@ -78,7 +85,7 @@ nav .navbar .links li .arrow{
   /* background: red; */
   height: 100%;
   width: 22px;
-  line-height: 70px;
+  line-height: 82px;
   text-align: center;
   display: inline-block;
   color: #fff;
@@ -86,7 +93,7 @@ nav .navbar .links li .arrow{
 }
 nav .navbar .links li .sub-menu{
   position: absolute;
-  top: 70px;
+  top: 82px;
   left: 0;
   line-height: 40px;
   background: rgba(0, 0, 0, 1.0);
@@ -126,67 +133,20 @@ nav .navbar .links li:hover .js-sub-menu{
   display: block;
 }
 .navbar .search-box{
-  position: relative;
-   height: 40px;
-  width: 40px;
+  background: #c4a75b;
+  padding: 5px 10px;
 }
-.navbar .search-box i{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  line-height: 40px;
-  text-align: center;
-  font-size: 22px;
+
+.navbar .search-box h4 {
   color: #fff;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  font-size: 12px;
 }
-.navbar .search-box .input-box{
-  position: absolute;
-  right: calc(100% - 40px);
-  top: 80px;
-  height: 60px;
-  width: 300px;
-  background: rgba(0, 0, 0, 1.0);
-  border-radius: 6px;
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.4s ease;
-}
-.navbar.showInput .search-box .input-box{
-  top: 65px;
-  opacity: 1;
-  pointer-events: auto;
-  background: rgba(0, 0, 0, 1.0);
-}
-.search-box .input-box::before{
-  content: '';
-  position: absolute;
-  height: 20px;
-  width: 20px;
-  background: rgba(0, 0, 0, 1.0);
-  right: 10px;
-  top: -6px;
-  transform: rotate(45deg);
-}
-.search-box .input-box input{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border-radius: 4px;
-  transform: translate(-50%, -50%);
-  height: 35px;
-  width: 280px;
-  outline: none;
-  padding: 0 15px;
-  font-size: 16px;
-  border: none;
-}
+
+
 .navbar .nav-links .sidebar-logo{
   display: none;
 }
-.navbar .fa-bars{
+.navbar .bx-menu{
   display: none;
 }
 @media (max-width:920px) {
@@ -210,7 +170,7 @@ nav .navbar .links li:hover .js-sub-menu{
   nav{
     /* position: relative; */
   }
-  .navbar .fa-bars{
+  .navbar .bx-menu{
     display: block;
   }
   nav .navbar .nav-links{
@@ -313,224 +273,85 @@ nav .navbar .links li .sub-menu li{
 
 
 
-/*showcase*/
-.showcase {
-  margin: 2rem 0;
-}
-.mySlides {display: none;}
-img {vertical-align: middle;}
 
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
+
+.services {
+  height: 100vh;
+  background: #f1f4f7;
+} 
+
+
+.services .services-content {
+  max-width: 1200px;
   margin: auto;
 }
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
+.services .services-content h1 {
+  padding: 2rem 0;
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-
-.product .product-content {
-  display: grid;
-  grid-template-columns: 70% 26%;
-  grid-gap: 20px;
-  padding: 0 2rem;
-}
-
-.item1 {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 1.0);
-}
-
-.item1 .content {
-  margin-top: 2rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.item1 .content img {
-  height: 100px;
-  width: 80px;
-}
-
-.item2 {
-
-}
-
-
-
-
-
-
-/*login*/
-
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-
-/* Set a style for all buttons */
-button {
-  background-color: rgba(0, 0, 0, 1.0);
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
-
-button:hover {
-  opacity: 0.8;
-}
-
-/* Extra styles for the cancel button */
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
-
-/* Center the image and position the close button */
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
+.services .services-content .services-heading .box {
   position: relative;
+  height: 180px;
+  width: 540px;
+  background: #ffffff;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .1);
 }
 
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
+.services .services-content .services-heading {
+  margin-top: 3.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 2rem;
 }
 
-.container {
-  padding: 16px;
+@media screen and (max-width: 800px) {
+  .services .services-content .services-heading {
+    grid-template-columns: repeat(1, auto);
+  }
 }
 
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+.box-content {
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 500px; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  padding-top: 60px;
 }
 
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+.box-content h1 {
+  font-size: 16px;
+  color: #555;
 }
 
-/* The Close Button (x) */
-.close {
-  position: absolute;
-  right: 25px;
-  top: 0;
-  color: #000;
-  font-size: 35px;
-  font-weight: bold;
+.box-content .btn {
+  border: 1px solid #777;
+  text-decoration: none;
+  color: #c4a75b;
+  font-size: 14px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .1);
 }
 
-.close:hover,
-.close:focus {
-  color: red;
-  cursor: pointer;
+/*showcase*/
+.showcase {
+  height: 60vh;
+  background: url('https://images.unsplash.com/photo-1571680301128-d9344ac2da15?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fGFpcnBvcnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60') no-repeat center center/cover;
 }
 
-/* Add Zoom Animation */
-.animate {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
+.showcase img {
+  height: 400px;
 }
 
-@-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)} 
-  to {-webkit-transform: scale(1)}
-}
-  
-@keyframes animatezoom {
-  from {transform: scale(0)} 
-  to {transform: scale(1)}
+
+
+.footer {
+  background: #fff;
+  /*background: red;*/
+  height: 100px;
 }
 
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
-  .cancelbtn {
-     width: 100%;
-  }
-}
-
-.item2 img {
-  width: 200px;
+.footer .footer-content {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
